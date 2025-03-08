@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Créditos</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h1>Registro de Créditos</h1>
+
+    <form id="credito-form">
+        <input type="text" id="cliente" placeholder="Nombre del cliente" required>
+        <input type="number" id="monto" placeholder="Monto" required>
+        <input type="number" id="tasa_interes" placeholder="Tasa de interés" required>
+        <input type="number" id="plazo" placeholder="Plazo (meses)" required>
+        <input type="date" id="fecha_otorgamiento" required>
+        <button type="submit">Agregar Crédito</button>
+    </form>
+
+    <h2>Lista de Créditos</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Cliente</th>
+                <th>Monto</th>
+                <th>Tasa de Interés</th>
+                <th>Plazo</th>
+                <th>Fecha</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody id="creditos-table"></tbody>
+    </table>
+
+    <!-- Gráfico de distribución de créditos -->
+    <canvas id="creditos-chart" width="400" height="200"></canvas>
+
+    <!-- Formulario de edición -->
+    <div id="edit-form" style="display: none;">
+        <h2>Editar Crédito</h2>
+        <input type="hidden" id="edit-id">
+        <input type="text" id="edit-cliente" placeholder="Nombre del cliente">
+        <input type="number" id="edit-monto" placeholder="Monto">
+        <input type="number" id="edit-tasa" placeholder="Tasa de interés">
+        <input type="number" id="edit-plazo" placeholder="Plazo (meses)">
+        <input type="date" id="edit-fecha">
+        <button onclick="updateCredito()">Guardar Cambios</button>
+        <button onclick="cancelEdit()">Cancelar</button>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

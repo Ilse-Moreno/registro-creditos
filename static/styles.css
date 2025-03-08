@@ -1,0 +1,109 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+    text-align: center;
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 800px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Títulos */
+h1, h2 {
+    color: #2c3e50;
+}
+
+/* Formulario */
+form {
+    background: #ecf0f1;
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+    max-width: 250px;
+}
+
+button {
+    background: #3498db;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button:hover {
+    background: #2980b9;
+}
+
+/* Tabla de créditos */
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background: #3498db;
+    color: white;
+}
+
+td {
+    background: #f8f9fa;
+}
+
+/* Botón de eliminar */
+button.delete-btn {
+    background: #e74c3c;
+}
+
+button.delete-btn:hover {
+    background: #c0392b;
+}
+
+/* Gráfica */
+canvas {
+    margin-top: 20px;
+    background: #fff;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+/* Responsividad */
+@media (max-width: 600px) {
+    form {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    input {
+        width: 100%;
+    }
+}
